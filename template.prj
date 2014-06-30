@@ -1,0 +1,60 @@
+#########################################################################
+# Files settings
+#
+# Source folders list
+SRCDIRLIST   = src
+# Source files list
+SRCLIST      =
+# Toplevel output folder (default: current folder)
+BUILDROOT    =
+# Where to put target under BUILDROOT? (default: BUILDROOT/)
+BINDIR       = bin
+# Target name (default: config file's name w/o extension)
+TARGET       = $(PROJECT)
+
+#########################################################################
+#
+# Terminal settings
+#
+TERMNAME     =
+TERMOPTIONS  =
+
+#########################################################################
+#
+# Preprocessors settings
+#
+# C/C++ preprocessor flags
+CPPFLAGS     =
+# C/C++ preprocessor macros definitions
+CPPMACROS    =
+# C/C++ preprocessor include files path
+CPPINCPATH   = include
+
+#########################################################################
+#
+# Compilers settings
+#
+# C compiler flags
+CFLAGS       = -g -pipe -pedantic -Wall -Werror -O0
+# C++ compiler flags
+CXXFLAGS     = $(CFLAGS)
+
+#########################################################################
+#
+# Linker settings
+#
+# Static archive creation flags
+ARFLAGS      = rucs
+# Linker flags
+LDFLAGS      = $(shell [ `uname -s` == "Darwin" ] && echo "-Wl,-w")
+# Libraries search path
+LIBRARYPATH  =
+# Required libraries list
+LIBRARIES    =
+# Raw object files lists to be linked before and after target object
+# files (used with -nostdlib), usually empty
+LDPRELIBS    =
+LDPOSTLIBS   =
+
+# Required 'pkg-config' packages list. Format: pkgname[:==|<=|>=version]
+REQUIREPKGS  =
