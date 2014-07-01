@@ -11,11 +11,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4AC3163619615DE400368C73 /* template-doc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = "template-doc"; path = "/Users/vsemyonoff/Sources/template/build/Debug/template-doc"; sourceTree = "<absolute>"; };
-		4ACC1EDB195D6A580081EB90 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
-		4ACC1EDD195D6A580081EB90 /* main.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = main.hpp; sourceTree = "<group>"; };
+		4A273A2F1962AC4100E7DC4C /* template-doc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = "template-doc"; path = "/Users/vsemyonoff/Sources/template/build/Debug/template-doc"; sourceTree = "<absolute>"; };
+		4A273A311962AC5800E7DC4C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		4A273A321962AC5800E7DC4C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = doc/README.md; sourceTree = "<group>"; };
+		4A273A331962AC7E00E7DC4C /* depends.prg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = depends.prg; sourceTree = "<group>"; };
+		4A273A351962AC7E00E7DC4C /* main.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = main.hpp; sourceTree = "<group>"; };
 		4ACC1EDE195D6A580081EB90 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; name = Makefile; path = ../umake/Makefile; sourceTree = "<group>"; };
-		4ACC1EDF195D6A580081EB90 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README; path = doc/README; sourceTree = "<group>"; };
 		4ACC1EE1195D6A580081EB90 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		4ACC1EE2195D6A580081EB90 /* template.prj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = template.prj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -31,33 +32,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4A524D59195D648600512A01 = {
+		4A273A301962AC5800E7DC4C /* doc */ = {
 			isa = PBXGroup;
 			children = (
-				4ACC1EDA195D6A580081EB90 /* doc */,
-				4ACC1EDC195D6A580081EB90 /* include */,
-				4ACC1EE0195D6A580081EB90 /* src */,
-				4ACC1EE3195D6A580081EB90 /* test */,
-				4ACC1EDE195D6A580081EB90 /* Makefile */,
-				4ACC1EDF195D6A580081EB90 /* README */,
-				4ACC1EE2195D6A580081EB90 /* template.prj */,
-			);
-			sourceTree = "<group>";
-		};
-		4ACC1EDA195D6A580081EB90 /* doc */ = {
-			isa = PBXGroup;
-			children = (
-				4ACC1EDB195D6A580081EB90 /* README */,
+				4A273A311962AC5800E7DC4C /* README.md */,
 			);
 			path = doc;
 			sourceTree = "<group>";
 		};
-		4ACC1EDC195D6A580081EB90 /* include */ = {
+		4A273A341962AC7E00E7DC4C /* include */ = {
 			isa = PBXGroup;
 			children = (
-				4ACC1EDD195D6A580081EB90 /* main.hpp */,
+				4A273A351962AC7E00E7DC4C /* main.hpp */,
 			);
 			path = include;
+			sourceTree = "<group>";
+		};
+		4A524D59195D648600512A01 = {
+			isa = PBXGroup;
+			children = (
+				4A273A301962AC5800E7DC4C /* doc */,
+				4A273A341962AC7E00E7DC4C /* include */,
+				4ACC1EE0195D6A580081EB90 /* src */,
+				4ACC1EE3195D6A580081EB90 /* test */,
+				4ACC1EDE195D6A580081EB90 /* Makefile */,
+				4A273A321962AC5800E7DC4C /* README.md */,
+				4A273A331962AC7E00E7DC4C /* depends.prg */,
+				4ACC1EE2195D6A580081EB90 /* template.prj */,
+			);
 			sourceTree = "<group>";
 		};
 		4ACC1EE0195D6A580081EB90 /* src */ = {
@@ -108,7 +110,7 @@
 			);
 			name = "template-doc";
 			productName = "template-doc";
-			productReference = 4AC3163619615DE400368C73 /* template-doc */;
+			productReference = 4A273A2F1962AC4100E7DC4C /* template-doc */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -287,6 +289,7 @@
 				4AC3163E19615DE400368C73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
