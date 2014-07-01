@@ -1,11 +1,15 @@
 #!/usr/bin/env bash
 
-[ $# -lt 1 ] || [ $# -gt 2 ] && echo "usage: $(basename ${0}) project_name [remote_origin_url]" && exit 1
-
-
+# Constatns
 TEMPLATE_NAME="template"
-PROJECT_NAME="${1}"
-PROJECT_REPO="${2}"
+
+# Validate arguments
+if [ ${#} -gt 1 ]; then
+    echo "usage: $(basename ${0}) [remote_origin_url]"
+    exit 1
+fi
+PROJECT_NAME="$(basename $(pwd))"
+PROJECT_REPO="${1}"
 
 # Prepare new repo for the project
 if [[ "${PROJECT_REPO}" == "file://"* ]]; then
@@ -21,17 +25,31 @@ if [[ "${PROJECT_REPO}" == "/"* ]]; then
     git init --bare "${PROJECT_REPO}"
 fi
 
-echo "Doing setup in '$(pwd)'"
+# Update XCode project file
 sed -i -e "s/${TEMPLATE_NAME}/${PROJECT_NAME}/g" "${TEMPLATE_NAME}.xcodeproj/project.pbxproj"
 sed -i -e "s/__ORGANIZATIONNAME__/${USER}/g" "${TEMPLATE_NAME}.xcodeproj/project.pbxproj"
 mv -v "${TEMPLATE_NAME}.xcodeproj" "${PROJECT_NAME}.xcodeproj"
+
+# Update GNU make project file
 mv -v "${TEMPLATE_NAME}.prj" "${PROJECT_NAME}.prj"
+
+# Update README.md
+cat << EOF > doc/README.md
+${PROJECT_NAME} Description
+===========================
+
+Modify README.md and put useful information here.
+Information about 'Markdown Syntax' you can find [here][1] and [here][2].
+
+[1]: http://daringfireball.net/projects/markdown/basics         "Markdown Basics"
+[2]: https://help.github.com/articles/github-flavored-markdown  "GitHub Flavored Markdown"
+EOF
 
 # Init submodules
 git submodule update --init --recursive
 
 # Init working repo
-rm -rf ".umake/.git" ".umake/test" ".gitmodules" ".git"
+rm -rf ".umake/.git" ".umake/test" ".gitmodules" ".git" "${0}"
 git init "."
 git add "."
 git commit -a -m "Initial commit"
@@ -42,4 +60,5 @@ if [ -n "${PROJECT_REPO}" ]; then
     git push -u origin master
 fi
 
+# End
 echo "Project generation done"
