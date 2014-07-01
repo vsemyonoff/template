@@ -1,1 +1,1 @@
-../umake/Makefile
+.umake/Makefile

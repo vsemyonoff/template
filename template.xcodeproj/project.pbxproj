@@ -11,12 +11,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4A273A2F1962AC4100E7DC4C /* template-doc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = "template-doc"; path = "/Users/vsemyonoff/Sources/template/build/Debug/template-doc"; sourceTree = "<absolute>"; };
+		4A273A2F1962AC4100E7DC4C /* template-doc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = "template-doc"; path = ""; sourceTree = "<absolute>"; };
 		4A273A311962AC5800E7DC4C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		4A273A321962AC5800E7DC4C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = doc/README.md; sourceTree = "<group>"; };
 		4A273A331962AC7E00E7DC4C /* depends.prg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = depends.prg; sourceTree = "<group>"; };
 		4A273A351962AC7E00E7DC4C /* main.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = main.hpp; sourceTree = "<group>"; };
-		4ACC1EDE195D6A580081EB90 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; name = Makefile; path = ../umake/Makefile; sourceTree = "<group>"; };
 		4ACC1EE1195D6A580081EB90 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		4ACC1EE2195D6A580081EB90 /* template.prj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = template.prj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -55,7 +54,6 @@
 				4A273A341962AC7E00E7DC4C /* include */,
 				4ACC1EE0195D6A580081EB90 /* src */,
 				4ACC1EE3195D6A580081EB90 /* test */,
-				4ACC1EDE195D6A580081EB90 /* Makefile */,
 				4A273A321962AC5800E7DC4C /* README.md */,
 				4A273A331962AC7E00E7DC4C /* depends.prg */,
 				4ACC1EE2195D6A580081EB90 /* template.prj */,
@@ -110,7 +108,6 @@
 			);
 			name = "template-doc";
 			productName = "template-doc";
-			productReference = 4A273A2F1962AC4100E7DC4C /* template-doc */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -120,7 +117,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0510;
-				ORGANIZATIONNAME = "Vladislav Semyonoff";
+				ORGANIZATIONNAME = __ORGANIZATIONNAME__;
 			};
 			buildConfigurationList = 4A524D5D195D648600512A01 /* Build configuration list for PBXProject "template" */;
 			compatibilityVersion = "Xcode 3.2";

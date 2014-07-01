@@ -1,0 +1,3 @@
+[submodule ".umake"]
+	path = .umake
+	url = git://github.com/vsemyonoff/umake
